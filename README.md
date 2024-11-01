@@ -72,8 +72,8 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/0ddFl3xx/state-management-redux.git
-cd state-management-redux
+git clone https://github.com/0ddFl3xx/state-management.git
+cd state-management
 ```
 
 **Installation**
