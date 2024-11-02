@@ -12,7 +12,7 @@
 <h3 align="center">State Management with Redux Toolkit</h3>
 
 <div align="center">
-  <a href="">🌐View live demo🌐</a>
+  <a href="https://state-management-kappa.vercel.app/">🌐View live demo🌐</a>
 </div>
   
 </div>
