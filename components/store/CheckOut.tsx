@@ -172,38 +172,45 @@ function CheckoutContent() {
               </h2>
               {cart.items.length > 0 ? (
                 <>
-                  {cart.items.map((item) => (
-                    <ul key={item.id} className="text-black mt-10 space-y-6">
-                      <li className="flex flex-wrap gap-4 text-base">
+                  <ul className="text-black mt-10 space-y-6">
+                    {cart.items.map((item) => (
+                      <li
+                        key={item.id}
+                        className="flex flex-wrap gap-4 text-base">
                         {item.name}
                         <span className="ml-auto font-bold">
                           P{item.price} × {item.quantity}
                         </span>
                       </li>
-                      <li className="flex flex-wrap gap-4 text-base border-t-2 pt-4">
-                        Sub Total{" "}
-                        <span className="ml-auto font-bold">
-                          ${subTotal.toFixed(2)}
-                        </span>
-                      </li>
-                      <li className="flex flex-wrap gap-4 text-base ">
-                        TAX(14%){" "}
-                        <span className="ml-auto font-bold">
-                          ${vatAmount.toFixed(2)}
-                        </span>
-                      </li>
-                      <li className="flex flex-wrap gap-4 text-3xl font-bold">
-                        Total{" "}
-                        <span className="ml-auto truncate">
-                          ${totalPriceWithVAT.toFixed(2)}
-                        </span>
-                      </li>
-                    </ul>
-                  ))}
+                    ))}
+                  </ul>
+
+                  <div className="text-base border-t-2 pt-4 mt-4">
+                    <div className="flex flex-wrap gap-4">
+                      Sub Total
+                      <span className="ml-auto font-bold">
+                        ${subTotal.toFixed(2)}
+                      </span>
+                    </div>
+                    <div className="flex flex-wrap gap-4">
+                      TAX(14%)
+                      <span className="ml-auto font-bold">
+                        ${vatAmount.toFixed(2)}
+                      </span>
+                    </div>
+                    <div className="flex flex-wrap gap-4 text-3xl font-bold">
+                      Total
+                      <span className="ml-auto truncate">
+                        ${totalPriceWithVAT.toFixed(2)}
+                      </span>
+                    </div>
+                  </div>
                 </>
               ) : (
                 <>
-                  <p className="flex items-center justify-center py-24 text-black text-center">Your cart is empty!</p>
+                  <p className="flex items-center justify-center py-24 text-black text-center">
+                    Your cart is empty!
+                  </p>
                 </>
               )}
             </div>
